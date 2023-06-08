@@ -23,3 +23,28 @@ Revenue and expenses may have multiple entries per month, may have missing data 
 
 ### Sample data
 2 set of files have been included where input is sample input data and output is the expected values.
+
+
+-------------------------------------------------------------        ** SOLUTION  **            -------------------------------------------------------------------------
+
+
+# SOLUTION 
+
+The ` calculateBalanceSheet ` function takes in revenue data and expense data as input and calculates the monthly balances. 
+
+###### calculateBalanceSheet:
+
+- Initialize an empty ` balanceSheet ` object to store the monthly balances.
+- Iterate through the revenue data and expense data arrays.
+  - For each revenue entry, extract the month from the ` startDate ` and update the balance in the balanceSheet object by adding the revenue amount.
+  - For each expense entry, extract the month from the ` startDate ` and update the balance in the balanceSheet object by subtracting the expense amount.
+- Use the ` findMissingMonths ` function to identify any missing months in the balanceSheet object.
+  - The findMissingMonths function finds the minimum and maximum dates in the balanceSheetMonths array.
+- Set the missing months in the balanceSheet object with a balance of 0.
+- Convert the ` balanceSheet ` object into an array of entries using ` Object.entries `.
+- Sort the ` balanceSheetEntries ` array by the startDate property in ascending order using the ` sort() ` method and ` localeCompare() ` function.  
+- Return the sorted ` balanceSheetEntries `  array.
+
+
+### THANKYOU FOR CHECKING THE SOLUTION
+
